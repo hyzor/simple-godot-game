@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://fexej5xg555e"]
+
+[ext_resource type="PackedScene" path="res://player.tscn" id="1_ghi56"]
+[ext_resource type="PackedScene" path="res://moving_platform.tscn" id="2_jkl78"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
+size = Vector2(800, 40)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ghi56"]
+size = Vector2(800, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plat1"]
+size = Vector2(120, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_small"]
+size = Vector2(120, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plat2"]
+size = Vector2(120, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plat3"]
+size = Vector2(100, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_smaller"]
+size = Vector2(100, 20)
+
+[node name="Main" type="Node2D" unique_id=1164319624]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=537081149]
+position = Vector2(400, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=896438388]
+shape = SubResource("RectangleShape2D_floor")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=313134418]
+modulate = Color(0.3, 0.7, 0.3, 1)
+texture = SubResource("PlaceholderTexture2D_ghi56")
+
+[node name="StaticPlatform1" type="StaticBody2D" parent="." unique_id=236571078]
+position = Vector2(510, -41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform1" unique_id=1013017164]
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform1" unique_id=287508409]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform2" type="StaticBody2D" parent="." unique_id=538386843]
+position = Vector2(484, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform2" unique_id=934333674]
+shape = SubResource("RectangleShape2D_plat2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform2" unique_id=1189099014]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform3" type="StaticBody2D" parent="." unique_id=1959428078]
+position = Vector2(362, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform3" unique_id=141409314]
+shape = SubResource("RectangleShape2D_plat3")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform3" unique_id=1641257426]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_smaller")
+
+[node name="Player" parent="." unique_id=1356100327 instance=ExtResource("1_ghi56")]
+position = Vector2(100, 300)
+
+[node name="MovingPlatform1" parent="." unique_id=457016238 instance=ExtResource("2_jkl78")]
+position = Vector2(614, 139)
+
+[node name="MovingPlatform2" parent="." unique_id=1788950469 instance=ExtResource("2_jkl78")]
+position = Vector2(513, 196)
+move_distance = 80.0
+move_speed = 40.0
+move_direction = Vector2(0, 1)

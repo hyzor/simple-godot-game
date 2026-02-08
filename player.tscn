@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c2q5v1h0mq8k"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_abc12"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abc12"]
+size = Vector2(32, 32)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_abc12"]
+size = Vector2(32, 32)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_abc12")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_abc12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_abc12")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
