@@ -67,7 +67,8 @@ modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_smaller")
 
 [node name="Player" parent="." unique_id=1356100327 instance=ExtResource("1_ghi56")]
-position = Vector2(91, -447)
+position = Vector2(207, 296)
+fall_threshold = 750.0
 
 [node name="MovingPlatform1" parent="." unique_id=457016238 instance=ExtResource("2_jkl78")]
 position = Vector2(614, 139)
@@ -106,13 +107,13 @@ wait_time = 2.0
 start_time = 1.0
 
 [node name="MovingPlatform7" parent="." unique_id=1700728845 instance=ExtResource("2_jkl78")]
-position = Vector2(237.00002, -532)
+position = Vector2(239, -514)
 scale = Vector2(0.5999994, 1)
 move_distance = 175.0
 move_speed = 40.0
 move_direction = Vector2(0, 1)
-wait_time = 2.5
-start_time = 2.25
+wait_time = 3.5
+start_time = 3.0
 
 [node name="StaticPlatform4" type="StaticBody2D" parent="." unique_id=712125062]
 position = Vector2(665.00006, -97)
