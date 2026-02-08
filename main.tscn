@@ -57,7 +57,7 @@ modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_small")
 
 [node name="StaticPlatform3" type="StaticBody2D" parent="." unique_id=1959428078]
-position = Vector2(362, 22)
+position = Vector2(346, 19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform3" unique_id=141409314]
 shape = SubResource("RectangleShape2D_plat3")
@@ -67,13 +67,108 @@ modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_smaller")
 
 [node name="Player" parent="." unique_id=1356100327 instance=ExtResource("1_ghi56")]
-position = Vector2(100, 300)
+position = Vector2(91, -447)
 
 [node name="MovingPlatform1" parent="." unique_id=457016238 instance=ExtResource("2_jkl78")]
 position = Vector2(614, 139)
+start_time = 1.5
 
 [node name="MovingPlatform2" parent="." unique_id=1788950469 instance=ExtResource("2_jkl78")]
 position = Vector2(513, 196)
 move_distance = 80.0
 move_speed = 40.0
 move_direction = Vector2(0, 1)
+start_time = 1.0
+
+[node name="MovingPlatform4" parent="." unique_id=1538772151 instance=ExtResource("2_jkl78")]
+position = Vector2(1095, -187)
+move_distance = 80.0
+move_speed = 40.0
+move_direction = Vector2(0, 1)
+wait_time = 1.25
+start_time = 4.0
+
+[node name="MovingPlatform5" parent="." unique_id=936435002 instance=ExtResource("2_jkl78")]
+position = Vector2(901, -284)
+move_distance = 80.0
+move_speed = 40.0
+move_direction = Vector2(0, 1)
+wait_time = 2.0
+start_time = 1.5
+
+[node name="MovingPlatform6" parent="." unique_id=1658701954 instance=ExtResource("2_jkl78")]
+position = Vector2(77, -398)
+scale = Vector2(0.5999994, 1)
+move_distance = 150.0
+move_speed = 40.0
+move_direction = Vector2(0, 1)
+wait_time = 2.0
+start_time = 1.0
+
+[node name="MovingPlatform7" parent="." unique_id=1700728845 instance=ExtResource("2_jkl78")]
+position = Vector2(237.00002, -532)
+scale = Vector2(0.5999994, 1)
+move_distance = 175.0
+move_speed = 40.0
+move_direction = Vector2(0, 1)
+wait_time = 2.5
+start_time = 2.25
+
+[node name="StaticPlatform4" type="StaticBody2D" parent="." unique_id=712125062]
+position = Vector2(665.00006, -97)
+scale = Vector2(0.47999513, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform4" unique_id=2013745669]
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform4" unique_id=1761623329]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform5" type="StaticBody2D" parent="." unique_id=586503622]
+position = Vector2(707, -280)
+scale = Vector2(0.15999025, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform5" unique_id=1326385648]
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform5" unique_id=1538699652]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform6" type="StaticBody2D" parent="." unique_id=42817394]
+position = Vector2(575, -280)
+scale = Vector2(0.15999025, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform6" unique_id=380654655]
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform6" unique_id=37813704]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform7" type="StaticBody2D" parent="." unique_id=36535301]
+position = Vector2(430, -280)
+scale = Vector2(0.15999025, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform7" unique_id=749510121]
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform7" unique_id=1816287375]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform8" type="StaticBody2D" parent="." unique_id=1717492729]
+position = Vector2(262, -270)
+scale = Vector2(0.15999025, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform8" unique_id=1535208427]
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform8" unique_id=2066246615]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="MovingPlatform3" parent="." unique_id=1896666790 instance=ExtResource("2_jkl78")]
+position = Vector2(821, -106)
+start_time = 3.0

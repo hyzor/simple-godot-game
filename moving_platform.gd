@@ -4,17 +4,24 @@ extends AnimatableBody2D
 @export var move_speed: float = 50.0
 @export var move_direction: Vector2 = Vector2.RIGHT
 @export var wait_time: float = 1.0
+@export var start_time: float = 0.0
 
 var start_position: Vector2
 var target_position: Vector2
 var moving_to_target: bool = true
 var wait_timer: float = 0.0
+var start_timer: float = 0.0
 
 func _ready() -> void:
     start_position = global_position
     target_position = start_position + (move_direction.normalized() * move_distance)
+    start_timer = start_time
 
 func _physics_process(delta: float) -> void:
+    if start_timer > 0:
+        start_timer -= delta
+        return
+
     if wait_timer > 0:
         wait_timer -= delta
         return
