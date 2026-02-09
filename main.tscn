@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" path="res://spike.tscn" id="3_spike"]
 [ext_resource type="PackedScene" path="res://rotating_platform.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" path="res://goal.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" path="res://timer_ui.tscn" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(800, 40)
@@ -317,3 +318,5 @@ wait_time = 1.25
 [node name="Goal" parent="." unique_id=2075519887 instance=ExtResource("5_lquwl")]
 position = Vector2(68, -1106.0001)
 scale = Vector2(0.47058824, 0.78571427)
+
+[node name="TimerUI" parent="." unique_id=95214980 instance=ExtResource("6_7mycd")]

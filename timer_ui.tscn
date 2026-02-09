@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wqpip6sg7fg0"]
+
+[ext_resource type="Script" path="res://timer_ui.gd" id="1_timerui"]
+
+[node name="TimerUI" type="CanvasLayer"]
+layer = 101
+script = ExtResource("1_timerui")
+
+[node name="TimerLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 60.0
+horizontal_alignment = 2
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 24

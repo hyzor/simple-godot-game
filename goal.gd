@@ -10,7 +10,13 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		level_completed.emit()
+		_stop_timer()
 		_show_victory_ui()
+
+func _stop_timer() -> void:
+	var timer_ui = get_tree().root.get_node_or_null("TimerUI")
+	if timer_ui:
+		timer_ui.stop()
 
 var victory_ui: CanvasLayer = null
 
