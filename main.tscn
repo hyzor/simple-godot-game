@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c2q5v1h0mq8k" path="res://player.tscn" id="1_ghi56"]
 [ext_resource type="PackedScene" uid="uid://d3r6t7y8vai0" path="res://moving_platform.tscn" id="2_jkl78"]
 [ext_resource type="PackedScene" path="res://spike.tscn" id="3_spike"]
+[ext_resource type="PackedScene" path="res://rotating_platform.tscn" id="4_1bvp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(800, 40)
@@ -72,7 +73,7 @@ modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_smaller")
 
 [node name="Player" parent="." unique_id=1356100327 instance=ExtResource("1_ghi56")]
-position = Vector2(706, -524)
+position = Vector2(340, -954)
 fall_threshold = 750.0
 
 [node name="MovingPlatform1" parent="." unique_id=457016238 instance=ExtResource("2_jkl78")]
@@ -206,13 +207,41 @@ texture = SubResource("PlaceholderTexture2D_small")
 
 [node name="StaticPlatform9" type="StaticBody2D" parent="." unique_id=680935860]
 position = Vector2(725, -618)
-scale = Vector2(0.3999927, 1)
+scale = Vector2(0.43997318, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform9" unique_id=1341348328]
+scale = Vector2(1.3000054, 1)
 shape = SubResource("RectangleShape2D_plat1")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticPlatform9" unique_id=2092525047]
 modulate = Color(0.4, 0.6, 0.4, 1)
+scale = Vector2(1.3000054, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform10" type="StaticBody2D" parent="." unique_id=1054661422]
+position = Vector2(70.99994, -665)
+scale = Vector2(0.43997318, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform10" unique_id=1458371118]
+scale = Vector2(1.3000054, 1)
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform10" unique_id=57946485]
+modulate = Color(0.4, 0.6, 0.4, 1)
+scale = Vector2(1.3000054, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform11" type="StaticBody2D" parent="." unique_id=1148616452]
+position = Vector2(-17, -723)
+scale = Vector2(0.43997318, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform11" unique_id=1908991739]
+scale = Vector2(1.3000054, 1)
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform11" unique_id=31366290]
+modulate = Color(0.4, 0.6, 0.4, 1)
+scale = Vector2(1.3000054, 1)
 texture = SubResource("PlaceholderTexture2D_small")
 
 [node name="StaticPlatform8" type="StaticBody2D" parent="." unique_id=1717492729]
@@ -229,3 +258,46 @@ texture = SubResource("PlaceholderTexture2D_small")
 [node name="MovingPlatform3" parent="." unique_id=1896666790 instance=ExtResource("2_jkl78")]
 position = Vector2(821, -106)
 start_time = 3.0
+
+[node name="Spike" parent="." unique_id=1494176071 instance=ExtResource("3_spike")]
+position = Vector2(720, -640)
+
+[node name="RotatingPlatform" parent="." unique_id=420521626 instance=ExtResource("4_1bvp3")]
+position = Vector2(567, -632)
+scale = Vector2(0.6222429, 0.72758365)
+max_rotation_degrees = 45.0
+
+[node name="RotatingPlatform2" parent="." unique_id=2088007339 instance=ExtResource("4_1bvp3")]
+position = Vector2(395, -631)
+scale = Vector2(0.6222429, 0.72758365)
+rotation_speed = 2.0
+max_rotation_degrees = 45.0
+
+[node name="RotatingPlatform3" parent="." unique_id=2027401690 instance=ExtResource("4_1bvp3")]
+position = Vector2(214, -645)
+scale = Vector2(0.6222429, 0.72758365)
+rotation_speed = 2.5
+max_rotation_degrees = 50.0
+
+[node name="MovingPlatform" parent="." unique_id=1683977824 instance=ExtResource("2_jkl78")]
+position = Vector2(177, -839)
+scale = Vector2(0.68000245, 1)
+move_direction = Vector2(-0.5, 0.5)
+
+[node name="MovingPlatform12" parent="." unique_id=1901327450 instance=ExtResource("2_jkl78")]
+position = Vector2(329, -914)
+scale = Vector2(0.52000487, 1)
+move_direction = Vector2(0, 1)
+
+[node name="MovingPlatform13" parent="." unique_id=1443526682 instance=ExtResource("2_jkl78")]
+position = Vector2(491.99997, -1021)
+scale = Vector2(0.52000487, 1)
+move_speed = 70.0
+move_direction = Vector2(0, 1)
+wait_time = 0.8
+
+[node name="MovingPlatform14" parent="." unique_id=1676759688 instance=ExtResource("2_jkl78")]
+position = Vector2(258.99997, -1067)
+scale = Vector2(0.56, 1)
+move_distance = 120.0
+wait_time = 1.25
