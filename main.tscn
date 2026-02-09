@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3r6t7y8vai0" path="res://moving_platform.tscn" id="2_jkl78"]
 [ext_resource type="PackedScene" path="res://spike.tscn" id="3_spike"]
 [ext_resource type="PackedScene" path="res://rotating_platform.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" path="res://goal.tscn" id="5_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(800, 40)
@@ -73,7 +74,7 @@ modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_smaller")
 
 [node name="Player" parent="." unique_id=1356100327 instance=ExtResource("1_ghi56")]
-position = Vector2(340, -954)
+position = Vector2(114, 300)
 fall_threshold = 750.0
 
 [node name="MovingPlatform1" parent="." unique_id=457016238 instance=ExtResource("2_jkl78")]
@@ -255,6 +256,17 @@ shape = SubResource("RectangleShape2D_plat1")
 modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_small")
 
+[node name="StaticPlatform12" type="StaticBody2D" parent="." unique_id=2111444227]
+position = Vector2(84, -1073)
+scale = Vector2(0.95329475, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform12" unique_id=2097802564]
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform12" unique_id=622222119]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
 [node name="MovingPlatform3" parent="." unique_id=1896666790 instance=ExtResource("2_jkl78")]
 position = Vector2(821, -106)
 start_time = 3.0
@@ -301,3 +313,7 @@ position = Vector2(258.99997, -1067)
 scale = Vector2(0.56, 1)
 move_distance = 120.0
 wait_time = 1.25
+
+[node name="Goal" parent="." unique_id=2075519887 instance=ExtResource("5_lquwl")]
+position = Vector2(68, -1106.0001)
+scale = Vector2(0.47058824, 0.78571427)
