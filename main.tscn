@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://fexej5xg555e"]
 
-[ext_resource type="PackedScene" path="res://player.tscn" id="1_ghi56"]
-[ext_resource type="PackedScene" path="res://moving_platform.tscn" id="2_jkl78"]
+[ext_resource type="PackedScene" uid="uid://c2q5v1h0mq8k" path="res://player.tscn" id="1_ghi56"]
+[ext_resource type="PackedScene" uid="uid://d3r6t7y8vai0" path="res://moving_platform.tscn" id="2_jkl78"]
+[ext_resource type="PackedScene" path="res://spike.tscn" id="3_spike"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(800, 40)
@@ -56,6 +57,10 @@ shape = SubResource("RectangleShape2D_plat2")
 modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_small")
 
+[node name="Spike1" parent="StaticPlatform2" unique_id=999999001 instance=ExtResource("3_spike")]
+position = Vector2(-30, -22)
+scale = Vector2(0.88000244, 1)
+
 [node name="StaticPlatform3" type="StaticBody2D" parent="." unique_id=1959428078]
 position = Vector2(346, 19)
 
@@ -67,7 +72,7 @@ modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_smaller")
 
 [node name="Player" parent="." unique_id=1356100327 instance=ExtResource("1_ghi56")]
-position = Vector2(207, 296)
+position = Vector2(207, 313)
 fall_threshold = 750.0
 
 [node name="MovingPlatform1" parent="." unique_id=457016238 instance=ExtResource("2_jkl78")]
@@ -126,6 +131,10 @@ shape = SubResource("RectangleShape2D_plat1")
 modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_small")
 
+[node name="Spike2" parent="StaticPlatform4" unique_id=999999002 instance=ExtResource("3_spike")]
+position = Vector2(-0.00012715787, -20)
+scale = Vector2(1.7500077, 0.8399976)
+
 [node name="StaticPlatform5" type="StaticBody2D" parent="." unique_id=586503622]
 position = Vector2(707, -280)
 scale = Vector2(0.15999025, 1)
@@ -137,15 +146,20 @@ shape = SubResource("RectangleShape2D_plat1")
 modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_small")
 
+[node name="Spike3" parent="StaticPlatform5" unique_id=999999003 instance=ExtResource("3_spike")]
+position = Vector2(-825.0503, -16)
+scale = Vector2(4.2500763, 0.52000487)
+
 [node name="StaticPlatform6" type="StaticBody2D" parent="." unique_id=42817394]
-position = Vector2(575, -280)
-scale = Vector2(0.15999025, 1)
+position = Vector2(574, -280)
+scale = Vector2(0.5599903, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform6" unique_id=380654655]
 shape = SubResource("RectangleShape2D_plat1")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticPlatform6" unique_id=37813704]
 modulate = Color(0.4, 0.6, 0.4, 1)
+scale = Vector2(1.0000612, 1)
 texture = SubResource("PlaceholderTexture2D_small")
 
 [node name="StaticPlatform7" type="StaticBody2D" parent="." unique_id=36535301]
