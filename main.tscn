@@ -72,7 +72,7 @@ modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_smaller")
 
 [node name="Player" parent="." unique_id=1356100327 instance=ExtResource("1_ghi56")]
-position = Vector2(207, 313)
+position = Vector2(706, -524)
 fall_threshold = 750.0
 
 [node name="MovingPlatform1" parent="." unique_id=457016238 instance=ExtResource("2_jkl78")]
@@ -100,6 +100,37 @@ move_distance = 80.0
 move_speed = 40.0
 move_direction = Vector2(0, 1)
 wait_time = 2.0
+start_time = 1.5
+
+[node name="MovingPlatform8" parent="." unique_id=1697006656 instance=ExtResource("2_jkl78")]
+position = Vector2(355, -487)
+scale = Vector2(0.32, 1)
+move_distance = 120.0
+move_speed = 80.0
+start_time = 1.5
+
+[node name="MovingPlatform9" parent="." unique_id=783442533 instance=ExtResource("2_jkl78")]
+position = Vector2(533, -487)
+scale = Vector2(0.32, 1)
+move_distance = 120.0
+move_speed = 90.0
+wait_time = 0.75
+start_time = 1.5
+
+[node name="MovingPlatform10" parent="." unique_id=289722933 instance=ExtResource("2_jkl78")]
+position = Vector2(701, -487)
+scale = Vector2(0.32, 1)
+move_speed = 100.0
+wait_time = 0.5
+start_time = 1.5
+
+[node name="MovingPlatform11" parent="." unique_id=842237265 instance=ExtResource("2_jkl78")]
+position = Vector2(863, -577)
+scale = Vector2(0.32, 1)
+move_distance = 120.0
+move_speed = 150.0
+move_direction = Vector2(0, 1)
+wait_time = 0.5
 start_time = 1.5
 
 [node name="MovingPlatform6" parent="." unique_id=1658701954 instance=ExtResource("2_jkl78")]
@@ -170,6 +201,17 @@ scale = Vector2(0.15999025, 1)
 shape = SubResource("RectangleShape2D_plat1")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticPlatform7" unique_id=1816287375]
+modulate = Color(0.4, 0.6, 0.4, 1)
+texture = SubResource("PlaceholderTexture2D_small")
+
+[node name="StaticPlatform9" type="StaticBody2D" parent="." unique_id=680935860]
+position = Vector2(725, -618)
+scale = Vector2(0.3999927, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticPlatform9" unique_id=1341348328]
+shape = SubResource("RectangleShape2D_plat1")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticPlatform9" unique_id=2092525047]
 modulate = Color(0.4, 0.6, 0.4, 1)
 texture = SubResource("PlaceholderTexture2D_small")
 
