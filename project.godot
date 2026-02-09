@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Simple Game"
-run/main_scene="uid://b1a2c3d4e5f6"
+run/main_scene="uid://fexej5xg555e"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -8,30 +8,27 @@ extends CharacterBody2D
 var spawn_position: Vector2
 
 func _ready() -> void:
-    spawn_position = global_position
+	spawn_position = global_position
 
 func _physics_process(delta: float) -> void:
-    # Check if player fell off the level
-    if global_position.y > fall_threshold:
-        respawn()
+	# Check if player fell off the level
+	if global_position.y > fall_threshold:
+		respawn()
 
-    # Apply gravity
-    if not is_on_floor():
-        velocity.y += gravity * delta
+	# Apply gravity
+	if not is_on_floor():
+		velocity.y += gravity * delta
 
-    # Handle jump
-    if Input.is_action_just_pressed("jump") and is_on_floor():
-        velocity.y = jump_velocity
+	# Handle jump
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = jump_velocity
 
-    # Handle horizontal movement
-    var direction := Input.get_axis("move_left", "move_right")
-    if direction:
-        velocity.x = direction * speed
-    else:
-        velocity.x = move_toward(velocity.x, 0, speed)
+	# Handle horizontal movement
+	var direction := Input.get_axis("move_left", "move_right")
+	velocity.x = direction * speed if direction else move_toward(velocity.x, 0, speed)
 
-    move_and_slide()
+	move_and_slide()
 
 func respawn() -> void:
-    global_position = spawn_position
-    velocity = Vector2.ZERO
+	global_position = spawn_position
+	velocity = Vector2.ZERO
